@@ -1,10 +1,35 @@
-import { useLoaderData } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 import { Button } from './ui/button';
 import { TbLicense } from 'react-icons/tb';
 import { IoIosInformationCircleOutline } from 'react-icons/io';
+import { getBookings, saveBookings } from '@/utils/bookingUtils';
 
 export default function DetailsLawyer() {
   const lawyer = useLoaderData();
+  const navigate = useNavigate();
+
+  const handleBooking = () => {
+    const existing = getBookings();
+    const alreadyBooked = existing.find((item) => item.id === lawyer.id);
+
+    if (alreadyBooked) {
+      alert(`You've already booked ${lawyer.name}`);
+      return;
+    }
+
+    const newBooking = {
+      id: lawyer.id,
+      name: lawyer.name,
+      fee: lawyer.fee,
+      speciality: lawyer.speciality,
+    };
+
+    const updatedBookings = [...existing, newBooking];
+    saveBookings(updatedBookings);
+
+    alert(`Successfully booked ${lawyer.name}`);
+    navigate('/bookings');
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -83,7 +108,10 @@ export default function DetailsLawyer() {
           </span>
         </div>
         <div>
-          <Button className="bg-[#0EA106] text-white w-full mt-4">
+          <Button
+            onClick={handleBooking}
+            className="bg-[#0EA106] text-white w-full mt-4"
+          >
             Book Appointment Now
           </Button>
         </div>
