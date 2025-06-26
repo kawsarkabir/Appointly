@@ -1,3 +1,1 @@
-export const dataPromise = fetch(
-  'https://jsonplaceholder.typicode.com/posts',
-).then((res) => res.json());
+export const dataPromise = fetch('lawyers.json').then((res) => res.json());

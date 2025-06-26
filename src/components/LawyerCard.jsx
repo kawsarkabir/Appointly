@@ -1,7 +1,29 @@
-export default function LawyerCard(){
-    return (
-         <>
-            <h1>lawyer card</h1>
-         </>
-    );
+import { dataPromise } from '@/utils/dataPromise';
+import { use } from 'react';
+import DisplayLawyerCard from './DisplayLawyerCard';
+import { Button } from './ui/button';
+
+export default function LawyerCard() {
+  const data = use(dataPromise);
+  return (
+    <div className="py-14">
+      <div className="text-center w-3/4 mx-auto space-y-1.5">
+        <h1 className="text-3xl font-bold">Our Best Lawyers</h1>
+        <p className="text-[#0F0F0FCC]">
+          Our platform connects you with verified, experienced Lawyers across
+          various specialties — all at your convenience. Whether it&apos;s a
+          routine checkup or urgent consultation, book appointments in minutes
+          and receive quality care you can trust.
+        </p>
+      </div>
+      <div className="grid grid-cols-2 gap-5 my-10">
+        {data.map((lawyer) => (
+          <DisplayLawyerCard key={lawyer.id} lawyer={lawyer} />
+        ))}
+      </div>
+      <div className="flex justify-center">
+        <Button>View More</Button>
+      </div>
+    </div>
+  );
 }
