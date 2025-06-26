@@ -1,3 +1,4 @@
+import DetailsLawyer from '@/components/DetailsLawyer';
 import Blogs from '@/pages/Blogs';
 import Bookings from '@/pages/Bookings';
 import Contact from '@/pages/Contact';
@@ -15,6 +16,19 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: '/lawyer/:id',
+        element: <DetailsLawyer />,
+        loader: async ({ params }) => {
+          const res = await fetch('/lawyers.json');
+          const data = await res.json();
+          const lawyer = data.find((item) => item.id === params.id);
+          if (!lawyer) {
+            throw new Response('Not Found', { status: 404 });
+          }
+          return lawyer;
+        },
       },
       {
         path: '/bookings',

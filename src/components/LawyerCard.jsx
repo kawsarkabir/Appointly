@@ -23,7 +23,7 @@ export default function LawyerCard() {
       </div>
       <div className="flex justify-center">
         <Button className="rounded-full bg-[#0EA106] text-white">
-          View All Lawyer
+          Vieow All Lawyer
         </Button>
       </div>
     </div>

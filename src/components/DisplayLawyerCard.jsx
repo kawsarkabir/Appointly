@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { TbLicense } from 'react-icons/tb';
 import { Button } from './ui/button';
+import { Link } from 'react-router';
 
 export default function DisplayLawyerCard({ lawyer }) {
-  const { name, image, speciality, experience, licenseNumber } = lawyer;
+  const { id, name, image, speciality, experience, licenseNumber } = lawyer;
 
   return (
     <div className="flex items-center flex-wrap p-4 gap-10 border border-[rgba(15, 15, 15, 0.15);] rounded-xl">
@@ -29,12 +30,14 @@ export default function DisplayLawyerCard({ lawyer }) {
           </span>
           <span>{licenseNumber}</span>
         </div>
-        <Button
-          variant={'outline'}
-          className={'rounded-full w-full text-[#176AE5]'}
-        >
-          View Details
-        </Button>
+        <Link to={`/lawyer/${id}`}>
+          <Button
+            variant={'outline'}
+            className={'rounded-full w-full text-[#176AE5]'}
+          >
+            View Details
+          </Button>
+        </Link>
       </div>
     </div>
   );

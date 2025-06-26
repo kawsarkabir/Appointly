@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Ayesha Siddiqua",
-    "image": "./lawyers/man-1.jpg",
+    "image": "https://i.ibb.co/2HQRPLV/man-1.jpg",
     "speciality": "Family Law",
     "experience": 8,
     "licenseNumber": "BD-10234",
@@ -12,7 +12,7 @@
   {
     "id": "2",
     "name": "Tanvir Hasan",
-    "image": "./lawyers/man-2.jpg",
+    "image": "https://i.ibb.co/dJHKQmkz/man-2.jpg",
     "speciality": "Criminal Defense",
     "experience": 12,
     "licenseNumber": "BD-10058",
@@ -22,7 +22,7 @@
   {
     "id": "3",
     "name": "Nusrat Jahan",
-    "image": "./lawyers/man-3.jpg",
+    "image": "https://i.ibb.co/hFSTS7gC/man-3.jpg",
     "speciality": "Corporate Law",
     "experience": 10,
     "licenseNumber": "BD-10112",
@@ -32,7 +32,7 @@
   {
     "id": "4",
     "name": "Kazi Rafi",
-   "image": "./lawyers/man-4.jpg",
+   "image": "https://i.ibb.co/FLFLCC6T/man-4.jpg",
     "speciality": "Property Law",
     "experience": 6,
     "licenseNumber": "BD-10444",
@@ -42,7 +42,7 @@
   {
     "id": "5",
     "name": "Shabnam Akter",
-    "image": "./lawyers/man-5.jpg",
+    "image": "https://i.ibb.co/BVjwY6mg/man-5.jpg",
     "speciality": "Immigration Law",
     "experience": 9,
     "licenseNumber": "BD-10982",
@@ -52,7 +52,7 @@
   {
     "id": "6",
     "name": "Rezaul Karim",
-    "image": "./lawyers/man-6.jpg",
+    "image": "https://i.ibb.co/tTc7PPVk/man-6.jpg",
     "speciality": "Tax Law",
     "experience": 15,
     "licenseNumber": "BD-10578",
@@ -62,7 +62,7 @@
   {
     "id": "7",
     "name": "Farzana Islam",
-   "image": "./lawyers/man-7.jpg",
+   "image": "https://i.ibb.co/ccp86mS9/man-7.jpg",
     "speciality": "Constitutional Law",
     "experience": 11,
     "licenseNumber": "BD-10333",
@@ -72,7 +72,7 @@
   {
     "id": "8",
     "name": "Imran Hossain",
-    "image": "./lawyers/man-8.jpg",
+    "image": "https://i.ibb.co/ynKpmR5m/man-8.jpg",
     "speciality": "Labour Law",
     "experience": 7,
     "licenseNumber": "BD-10621",
@@ -82,7 +82,7 @@
   {
     "id": "9",
     "name": "Sadia Alam",
-  "image": "./lawyers/man-9.jpg",
+  "image": "https://i.ibb.co/LDJM7RX1/man-9.jpg",
     "speciality": "Cyber Law",
     "experience": 5,
     "licenseNumber": "BD-10845",
@@ -92,7 +92,7 @@
   {
     "id": "10",
     "name": "Mahfuz Rahman",
-   "image": "./lawyers/man-10.jpg",
+   "image": "https://i.ibb.co/bMmBpWcz/man-10.jpg",
     "speciality": "Human Rights Law",
     "experience": 14,
     "licenseNumber": "BD-10091",
@@ -102,7 +102,7 @@
   {
     "id": "11",
     "name": "Rumana Chowdhury",
-    "image": "./lawyers/man-11.jpg",
+    "image": "https://i.ibb.co/BVjwY6mg/man-5.jpg",
     "speciality": "Environmental Law",
     "experience": 6,
     "licenseNumber": "BD-10777",
@@ -112,7 +112,7 @@
   {
     "id": "12",
     "name": "Faisal Mahmud",
-  "image": "./lawyers/man-12.jpg",
+    "image": "https://i.ibb.co/v68RfVBj/man-12.jpg",
     "speciality": "International Law",
     "experience": 13,
     "licenseNumber": "BD-10189",
