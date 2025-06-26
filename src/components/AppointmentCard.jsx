@@ -1,7 +1,7 @@
-export default function AppointmentCard(){
-    return (
-         <>
-            <h1>AppointmentCard</h1>
-         </>
-    );
+export default function AppointmentCard() {
+  return (
+    <>
+      <h1>AppointmentCard</h1>
+    </>
+  );
 }
