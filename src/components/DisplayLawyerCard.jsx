@@ -6,7 +6,7 @@ export default function DisplayLawyerCard({ lawyer }) {
   const { name, image, speciality, experience, licenseNumber } = lawyer;
 
   return (
-    <div className="flex items-center p-4 gap-10 border border-[rgba(15, 15, 15, 0.15);] rounded-xl">
+    <div className="flex items-center flex-wrap p-4 gap-10 border border-[rgba(15, 15, 15, 0.15);] rounded-xl">
       <div>
         <div>
           <img src={image} alt="" className="w-40 h-40 rounded-4xl" />

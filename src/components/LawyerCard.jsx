@@ -16,13 +16,13 @@ export default function LawyerCard() {
           and receive quality care you can trust.
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-5 my-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-5 px-4  my-10">
         {data.map((lawyer) => (
           <DisplayLawyerCard key={lawyer.id} lawyer={lawyer} />
         ))}
       </div>
       <div className="flex justify-center">
-        <Button>View More</Button>
+        <Button className="rounded-full bg-[#0EA106] text-white">View All Lawyer</Button>
       </div>
     </div>
   );
