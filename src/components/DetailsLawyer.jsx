@@ -3,6 +3,7 @@ import { TbLicense } from 'react-icons/tb';
 import { getBookings, saveBookings } from '@/utils/bookingUtils';
 import AppointmentCard from './AppointmentCard';
 import { useEffect } from 'react';
+import { toast } from 'sonner';
 
 export default function DetailsLawyer() {
   const lawyer = useLoaderData();
@@ -12,14 +13,14 @@ export default function DetailsLawyer() {
 
   const handleBooking = () => {
     if (!isAvailableToday) {
-      alert('Lawyer is unavailable today.');
+      toast.error('Lawyer is unavailable today.');
       return;
     }
     const existing = getBookings();
     const alreadyBooked = existing.find((item) => item.id === lawyer.id);
 
     if (alreadyBooked) {
-      alert(`You've already booked ${lawyer.name}`);
+      toast.warning(`You've already booked ${lawyer.name}`);
       return;
     }
 
@@ -33,7 +34,7 @@ export default function DetailsLawyer() {
     const updatedBookings = [...existing, newBooking];
     saveBookings(updatedBookings);
 
-    alert(`Successfully booked ${lawyer.name}`);
+    toast.success(`Successfully booked ${lawyer.name}`);
     navigate('/bookings');
   };
   useEffect(() => {

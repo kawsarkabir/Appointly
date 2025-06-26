@@ -1,10 +1,17 @@
 import { dataPromise } from '@/utils/dataPromise';
-import { use } from 'react';
+import { use, useState } from 'react';
 import DisplayLawyerCard from './DisplayLawyerCard';
 import { Button } from './ui/button';
 
 export default function LawyerCard() {
   const data = use(dataPromise);
+
+  // Add state to track showAll
+  const [showAll, setShowAll] = useState(false);
+
+  // Show 6 lawyers initially, all if showAll = true
+  const lawyersToShow = showAll ? data : data.slice(0, 6);
+
   return (
     <div className="py-14">
       <div className="text-center w-3/4 mx-auto space-y-1.5">
@@ -16,16 +23,23 @@ export default function LawyerCard() {
           and receive quality care you can trust.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-5 px-4  my-10">
-        {data.map((lawyer) => (
+
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-5 px-4 my-10">
+        {lawyersToShow.map((lawyer) => (
           <DisplayLawyerCard key={lawyer.id} lawyer={lawyer} />
         ))}
       </div>
-      <div className="flex justify-center">
-        <Button className="rounded-full bg-[#0EA106] text-white">
-          Vieow All Lawyer
-        </Button>
-      </div>
+
+      {!showAll && (
+        <div className="flex justify-center">
+          <Button
+            className="rounded-full bg-[#0EA106] text-white"
+            onClick={() => setShowAll(true)}
+          >
+            View All Lawyers
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

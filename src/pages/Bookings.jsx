@@ -14,6 +14,7 @@ import { Button } from '@/components/ui/button';
 import { getBookings, saveBookings } from '@/utils/bookingUtils';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router';
+import { toast } from 'sonner';
 
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}
@@ -53,7 +54,7 @@ export default function Bookings() {
     const updated = bookings.filter((item) => item.id !== id);
     saveBookings(updated);
     setBookings(updated);
-    alert('Appointment Cancelled');
+    toast.error('Appointment Cancelled');
   };
 
   if (bookings.length === 0) {

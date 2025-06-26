@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "slug": "what-is-usestate",
+    "title": "What is useState and how does it work in React?",
+    "content": "The `useState` hook in React enables developers to add local component state to functional components. It returns an array containing the current state value and a setter function to update that value. When the state is updated using the setter function, React re-renders the component, reflecting the updated UI. This hook is particularly useful for managing interactive elements such as input fields, toggles, counters, modals, and more. State updates are asynchronous and batched by React for performance.",
+    "author": "Kawsar Kabir",
+    "date": "2024-08-31",
+    "readTime": "3 min read",
+    "coverImage": "https://galaxy.ai/_next/image?url=https%3A%2F%2Fimg.youtube.com%2Fvi%2FilqxZiXnwD8%2Fmaxresdefault.jpg&w=3840&q=75",
+    "tags": ["react", "hooks", "state"]
+  },
+  {
+    "id": 2,
+    "slug": "purpose-of-useeffect",
+    "title": "What is the purpose of useEffect in React?",
+    "content": "The `useEffect` hook is used to handle side effects in functional components. These include tasks like data fetching, DOM manipulation, subscribing to WebSocket or events, and setting up timers. It runs after the render phase by default, but its execution can be customized using a dependency array. If no dependencies are passed, it runs after every render. With an empty array, it behaves like `componentDidMount`. Cleanup functions can be returned from `useEffect` to avoid memory leaks, especially when dealing with subscriptions or intervals.",
+    "author": "Kawsar Kabir",
+    "date": "2024-08-31",
+    "readTime": "4 min read",
+    "coverImage": "https://eu-central-1-shared-euc1-02.graphassets.com/AvHQ3RDvFSousA8iwElOKz/F7cSmluHRrO6f7XeSuJy",
+    "tags": ["react", "hooks", "side-effects"]
+  },
+  {
+    "id": 3,
+    "slug": "what-is-custom-hook",
+    "title": "What is a custom hook in React and when should you use one?",
+    "content": "A custom hook in React is a JavaScript function that starts with the word 'use' and encapsulates reusable logic using built-in hooks like `useState`, `useEffect`, or others. They help keep components clean and DRY (Don’t Repeat Yourself). For example, if multiple components need form validation or API fetching logic, you can abstract that into a `useForm` or `useFetch` hook. Custom hooks promote separation of concerns and improve maintainability, making large React applications easier to scale.",
+    "author": "Kawsar Kabir",
+    "date": "2024-08-31",
+    "readTime": "3 min read",
+    "coverImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZa2mb7GYX1BpRlzP2xS7UtR0O1319iCpJWA&s",
+    "tags": ["react", "hooks", "reusability"]
+  },
+  {
+    "id": 4,
+    "slug": "controlled-vs-uncontrolled",
+    "title": "Difference between controlled and uncontrolled components. Which one is better?",
+    "content": "In React, a controlled component is one where the form data is managed by React state via `useState`, and updates are handled through `onChange` events. This makes the component predictable and easier to validate or manipulate programmatically. An uncontrolled component uses the DOM directly through refs, allowing the input to manage its own state. While uncontrolled components are simpler for quick forms, controlled components are generally preferred in professional applications due to better validation, debugging, and integration with React's state management.",
+    "author": "Kawsar Kabir",
+    "date": "2024-08-31",
+    "readTime": "4 min read",
+    "coverImage": "https://blog.openreplay.com/images/understanding-controlled-and-uncontrolled-components-in-react/images/hero.png",
+    "tags": ["react", "forms", "controlled", "uncontrolled"]
+  },
+  {
+    "id": 5,
+    "slug": "about-useformstatus",
+    "title": "Tell us something about useFormStatus() in React.",
+    "content": "`useFormStatus` is a hook introduced in React 18 for use within `<form>` components, especially in concurrent or server-side environments. It provides access to form submission states like `pending`, `validating`, and `submitted`, which is useful for improving UX — for example, disabling the submit button while the form is being processed or showing a spinner. This is particularly relevant when using React’s new `<form>` enhancements or when building accessible and interactive forms that provide feedback during asynchronous operations.",
+    "author": "Kawsar Kabir",
+    "date": "2024-08-31",
+    "readTime": "3 min read",
+    "coverImage": "https://miro.medium.com/v2/resize:fit:1200/1*HWOGwjClDQbDxrAK0vjWjw.png",
+    "tags": ["react", "forms", "react18", "useFormStatus"]
+  }
+]
