@@ -5,6 +5,8 @@ import { Link } from 'react-router';
 
 export default function DisplayLawyerCard({ lawyer }) {
   const { id, name, image, speciality, experience, licenseNumber } = lawyer;
+  const today = new Date().toLocaleString('en-US', { weekday: 'long' });
+  const isAvailableToday = lawyer.availability.includes(today);
 
   return (
     <div className="flex items-center flex-wrap p-4 gap-10 border border-[rgba(15, 15, 15, 0.15);] rounded-xl">
@@ -15,9 +17,12 @@ export default function DisplayLawyerCard({ lawyer }) {
       </div>
       <div className="space-y-2">
         <div className="flex items-center gap-4">
-          <span className="text-[#09982F] bg-[#09982F1A] rounded-full py-1 px-3 text-xs ">
-            Avaiable
+          <span
+            className={`text-sm font-medium ${isAvailableToday ? 'text-[#0EA106] bg-[#09982F1A] rounded-full py-1 px-3 text-xs ' : 'text-red-500 bg-[#ffe6e6] rounded-full py-1 px-3 text-xs'}`}
+          >
+            {isAvailableToday ? 'Available' : 'Unavailable'}
           </span>
+
           <span className="text-[#176AE5] bg-[#176AE51A] py-1 rounded-full px-3 text-xs ">
             {experience}+ Years Experience
           </span>
