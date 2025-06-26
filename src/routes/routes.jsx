@@ -1,11 +1,13 @@
-import DetailsLawyer from '@/components/DetailsLawyer';
-import Blogs from '@/pages/Blogs';
-import Bookings from '@/pages/Bookings';
-import Contact from '@/pages/Contact';
-import Error404 from '@/pages/Error404';
-import Home from '@/pages/Home';
-import Root from '@/root/Root';
+import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router';
+
+const Root = lazy(() => import('@/root/Root'));
+const Error404 = lazy(() => import('@/pages/Error404'));
+const Home = lazy(() => import('@/pages/Home'));
+const Blogs = lazy(() => import('@/pages/Blogs'));
+const Bookings = lazy(() => import('@/pages/Bookings'));
+const Contact = lazy(() => import('@/pages/Contact'));
+const DetailsLawyer = lazy(() => import('@/components/DetailsLawyer'));
 
 export const router = createBrowserRouter([
   {

@@ -1,7 +1,12 @@
+import { useEffect } from 'react';
+
 export default function Contact() {
+  useEffect(() => {
+    document.title = 'Contact - Appointly';
+  }, []);
   return (
     <>
-      <h1>contact</h1>
+      <h1>Contact</h1>
     </>
   );
 }

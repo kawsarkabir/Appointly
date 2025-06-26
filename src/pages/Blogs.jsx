@@ -1,5 +1,5 @@
 import { blogs } from '@/utils/blogs';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Blogs() {
   const [openId, setOpenId] = useState(null);
@@ -7,6 +7,9 @@ export default function Blogs() {
   const toggle = (id) => {
     setOpenId(openId === id ? null : id);
   };
+   useEffect(() => {
+      document.title = 'Blogs - Appointly';
+    }, []);
 
   return (
     <div className="max-w-3xl mx-auto py-14 px-4">

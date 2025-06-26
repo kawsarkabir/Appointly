@@ -44,6 +44,7 @@ export default function Bookings() {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
+    document.title = 'My Bookings - Appointly';
     const stored = getBookings();
     setBookings(stored);
   }, []);

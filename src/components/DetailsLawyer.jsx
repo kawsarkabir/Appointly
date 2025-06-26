@@ -2,6 +2,7 @@ import { useLoaderData, useNavigate } from 'react-router';
 import { TbLicense } from 'react-icons/tb';
 import { getBookings, saveBookings } from '@/utils/bookingUtils';
 import AppointmentCard from './AppointmentCard';
+import { useEffect } from 'react';
 
 export default function DetailsLawyer() {
   const lawyer = useLoaderData();
@@ -35,6 +36,9 @@ export default function DetailsLawyer() {
     alert(`Successfully booked ${lawyer.name}`);
     navigate('/bookings');
   };
+  useEffect(() => {
+    document.title = `${lawyer.name} - Appointly`;
+  }, [lawyer.name]);
 
   return (
     <div className="container mx-auto p-4">
