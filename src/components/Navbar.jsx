@@ -42,7 +42,7 @@ export default function Navbar() {
               </li>
             ))}
             <li>
-              <Link to="/sign-up">
+              <Link to="/login">
                 <button className="mt-6 w-full bg-[#0ea106] text-white font-semibold px-4 py-2 rounded-full shadow hover:shadow-none">
                   Sign Up
                 </button>
@@ -78,7 +78,7 @@ export default function Navbar() {
           </ul>
 
           <div className="hidden md:block">
-            <Link to="/sign-up">
+            <Link to="/login">
               <button className="bg-[#0ea106] text-[#f1f1f1] font-medium px-6 py-2 rounded-full border border-black shadow-[0_4px_0_0_#3f700f] hover:shadow-none transition cursor-pointer">
                 Sign Up
               </button>

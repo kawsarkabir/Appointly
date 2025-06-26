@@ -8,6 +8,7 @@ const Blogs = lazy(() => import('@/pages/Blogs'));
 const Bookings = lazy(() => import('@/pages/Bookings'));
 const Contact = lazy(() => import('@/pages/Contact'));
 const DetailsLawyer = lazy(() => import('@/components/DetailsLawyer'));
+const Login = lazy(() => import('@/pages/Login'));
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
       },
     ],
   },
