@@ -29,6 +29,7 @@ export default function DisplayLawyerCard({ lawyer }) {
         </div>
         <h1 className="font-semibold text-xl">{name}</h1>
         <p className="text-[#0F0F0F99] font-semibold">{speciality}</p>
+        <div className="border-b border-dashed border-gray-400"></div>
         <div className="flex items-center gap-x-0.5 text-[#0F0F0FB3]">
           <span>
             <TbLicense />

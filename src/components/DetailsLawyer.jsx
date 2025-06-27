@@ -46,9 +46,9 @@ export default function DetailsLawyer() {
       <div className="mb-6 bg-[#0F0F0F0D] p-10 text-center rounded-xl">
         <h2 className="text-2xl font-bold">Lawyer’s Profile Details</h2>
         <p className="text-gray-600 max-w-5xl mx-auto my-4">
-          Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor
-          amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis
-          turpis imperdiet mattis donec dignissim volutpat.
+          Explore comprehensive details of the selected lawyer including their
+          experience, specialization, consultation fee, and availability. Make
+          an informed decision before booking your appointment.
         </p>
       </div>
 

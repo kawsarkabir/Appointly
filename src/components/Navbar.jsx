@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <div className="container mx-auto px-4">
       <div
-        className={`fixed inset-0 bg-black/30 z-40 transition-transform duration-300 ${
+        className={`fixed inset-0 bg-black/30 z-70 transition-transform duration-300 ${
           openMenu ? 'translate-x-0' : '-translate-x-full'
         } md:hidden`}
         onClick={toggleMenu}
