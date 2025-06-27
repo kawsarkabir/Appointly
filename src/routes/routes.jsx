@@ -7,8 +7,8 @@ const Error404 = lazy(() => import('@/pages/Error404'));
 const Home = lazy(() => import('@/pages/Home'));
 const Blogs = lazy(() => import('@/pages/Blogs'));
 const Bookings = lazy(() => import('@/pages/Bookings'));
-const Contact = lazy(() => import('@/pages/Contact'));
 const DetailsLawyer = lazy(() => import('@/components/DetailsLawyer'));
+const Contact = lazy(() => import('@/pages/Contact'));
 const Login = lazy(() => import('@/pages/Login'));
 
 export const router = createBrowserRouter([
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
       {
         path: '/lawyer/:id',
         element: <DetailsLawyer />,
-        errorElement: <LawyerError />, // ⬅️ Show custom error UI
+        errorElement: <LawyerError />,
         loader: async ({ params }) => {
           const res = await fetch('/lawyers.json');
           const data = await res.json();
