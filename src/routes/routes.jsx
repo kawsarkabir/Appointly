@@ -1,3 +1,4 @@
+import LawyerError from '@/components/LawyerError';
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router';
 
@@ -23,12 +24,13 @@ export const router = createBrowserRouter([
       {
         path: '/lawyer/:id',
         element: <DetailsLawyer />,
+        errorElement: <LawyerError />, // ⬅️ Show custom error UI
         loader: async ({ params }) => {
           const res = await fetch('/lawyers.json');
           const data = await res.json();
           const lawyer = data.find((item) => item.id === params.id);
           if (!lawyer) {
-            throw new Response('Not Found', { status: 404 });
+            throw new Response('No Lawyer Found', { status: 404 });
           }
           return lawyer;
         },
